@@ -34,7 +34,8 @@ const styles = theme => ({
   content: {
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
-    marginTop: "100px"
+    marginTop: "100px",
+    width: `calc(100% - ${drawerWidth}px)`
   }
 });
 class AppliBar extends React.Component {
@@ -68,5 +69,4 @@ class AppliBar extends React.Component {
     );
   }
 }
-
-export default AppliBar;
+export default withStyles(styles)(AppliBar);
