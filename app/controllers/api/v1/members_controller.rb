@@ -1,5 +1,6 @@
-class MembersController < ApplicationController
+class Api::V1::MembersController < Api::V1::BaseController
   def index
+    respond_with Member.all
   end
 
   def show
@@ -15,5 +16,8 @@ class MembersController < ApplicationController
   end
 
   def create
+  end
+
+  def new
   end
 end

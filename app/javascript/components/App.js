@@ -1,17 +1,11 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
+import AppliBar from "./shared/AppliBar";
 class App extends React.Component {
   render() {
+    const classes = { classes: "class" };
     return (
       <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
-        </Switch>
+        <AppliBar classes={classes} />
       </div>
     );
   }

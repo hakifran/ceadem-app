@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  resources :members
-  match '*path', to: "pages#index", via: :all
+  root to: 'page#index'
+  
+  namespace :api do
+    namespace :v1 do
+      resources :members , only: [:index, :create, :destroy, :update]
+    end
+  end
 end
