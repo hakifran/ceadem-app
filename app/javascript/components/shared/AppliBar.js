@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
@@ -9,6 +8,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Members from "../members/Members";
+import AddMember from "../members/AddMember";
 import About from "../About";
 import Contact from "../Contact";
 import MenuRight from "./MenuRight";
@@ -51,9 +51,8 @@ class AppliBar extends React.Component {
           </Toolbar>
         </AppBar>
         <main className={classes.content}>
-          <Paper>
-            <Route exact path="/" component={Members} />
-          </Paper>
+          <Route exact path="/" component={Members} />
+          <Route exact path="/addMember" component={AddMember} />
         </main>
         <Drawer
           className={classes.drawer}
